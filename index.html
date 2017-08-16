@@ -48,7 +48,7 @@
 						<h3>An Introduction to <a href="https://github.com/paralax/awesome-honeypots">Honey{*}</a></h3>
 						<h3>Honeytoken Workshop</h3>
 				</section>
-				<section data-background-color="#1D032B" data-menu-title="Honeypot section">
+				<section data-background-color="#260339" data-menu-title="Honeypot section">
 					<h1>Honeypots</h1>
 				</section>
 				<section>
@@ -78,23 +78,23 @@
 						<h2>- Can be adapted to any environment</h2>
 					</section>
 					<section data-menu-title="III">
-						<h2>A Honeytoken can be a ...</h2>
+						<h2>A Honeytoken can be a...</h2>
 						<ul>
-							<li>Beacon document (e.g. MS Word/Excel, PDF)</li>
+							<li>Beacon document</li>
 							<li>Fake credentials/accounts</li>
 							<li>Database record</li>
 							<li>URL or HTTP endpoint</li>
 							<li>Fake file</li>
 							<li>DNS record</li>
 							<li>QR code!</li>
-							<li>Etc.</li>
+							<li>Anything you can think of!</li>
 						</ul>
 					</section>
 					<section data-menu-title="IV">
 						<h3>What about decoy mobile applications?</h3>
-						<img src="images/decoy-apps.png" height="400">
-						<small><i>- "You are what you click: Using Decoys to Identify Mobile Device Attackers",</i></small>
-						<small><i>RSA Conference 2015</i></small>
+						<img src="images/decoy-apps.png" height="300">
+						<small><i>- "Using Decoys to Identify Mobile Device Attackers", RSA Conference 2015</i></small>
+						<h4><a href="https://github.com/thinkst/secretkeeper">Secret Keeper</a></h4>
 					</section>
 				</section>
 				<section>
@@ -112,7 +112,7 @@
 						<img src="images/spy.gif" height="300">
 					</section>
 					<section data-menu-title="IV">
-						<h2>A Story</h2>
+						<h2>Lure the attackers into revealing themselves</h2>
 						<h4>...</h4>
 					</section>
 				</section>
@@ -131,9 +131,61 @@
 						<img src="images/att&ck-windows.png" height="600">
 					</section>
 				</section>
+				<section data-background-color="#117864" data-menu-title="Honeytokening section">
+					<h1>{Honey}tokening!</h1>
+				</section>
+				<section>
+					<section data-menu-title="Files">
+						<h1>Files!</h1>
+					</section>
+					<section data-menu-title="Documents">
+						<h2><font color="#DF5100">Documents</font> with false information or decptive content</h2>
+						<h3><font color="#117864">Purpose:</font> point attackers to traps/honey{*}</h3>
+						<small>- Generating deceptive content {Google Ben Whitham + honey file}</small>
+					</section>
+					<section data-menu-title="Monitored files">
+						<h2>Fake <font color="#DF5100">monitored files</font>:</h2>
+						<h2>file access auditing</h2>
+						<h3><font color="#117864">Purpose:</font> alert when accessed</h3>
+					</section>
+					<section data-menu-title="Beacon files">
+						<h2><font color="#DF5100">Beacon files</font> such as token'd</h2>
+						<h2>DOC or XLS files</h2>
+						<h3><font color="#117864">Purpose:</font> phone home when opened!</h3>
+					</section>
+				</section>
+				<section>
+					<section data-menu-title="Credentials">
+						<h1>Credentials!</h1>
+					</section>
+					<section data-menu-title="I">
+						<h3><a href="https://isc.sans.edu/forums/diary/Detecting+Mimikatz+Use+On+Your+Network/19311/">Honey hash</a>: fake credentials in memory</h3>
+						<h4>Pass-the-hash attack</h4>
+					</section>
+					<section data-menu-title="II">
+						<h3>Fake API access tokens, e.g. AWS Access Keys</h3>
+						<h3>Fake credentials in:</h3>
+						<ul>
+							<li>Password managers e.g. Web browser, KeePass</li>
+							<li>Log and configuration files</li>
+							<li>Documents e.g. instructions for remote access</li>
+							<li>Email, Messengers, etc.</li>
+						</ul>
+					</section>
+
+				</section>
+				<section data-menu-title="URL tokens">
+						<h1>URL {honey}token</h1>
+						<h2><font color="#117864">Web bug</font></h2>
+				</section>	
+				<section data-menu-title="Network tokens">
+					<h1>Network tokens</h1>
+					<h3>Hosts file, ARP table, Open connections</h3>
+					<h3><a href="http://www.beeswarm-ids.org/">Beeswarm</a> active IDS</h3>
+				</section>
 				<section data-background-color="#7C0124" data-menu-title="Workshop section">
 					<h1>Workshop</h1>
-					<h5>Honeytoken {Creation | Placement | Monitoring}</h5>
+					<h5>Honeytoken {Creation | Placement | Detection}</h5>
 				</section>
 				<section>
 					<section data-background-color="#EBF5FB" data-menu-title="Honeyλ I">
@@ -147,7 +199,9 @@
 						<p class="fragment">Customize the HTTP response for each token</p>
 						<p class="fragment">Threat Intelligence report (Source IP lookup)</p>
 						<p class="fragment">Based on Serverless framework</p>
-						<span class="fragment">--> pay-what-you-use</span>
+						<p class="fragment">--> pay-what-you-use</p>
+						<p class="fragment"><b>TODO:</b> SSL client fingerprint, de-anonymization, automatic decoy generation</p>
+
 					</section>
 					<section data-background-color="#EBF5FB"  data-menu-title="III">
 						<p>Slack, Email and SMS alerts</p>
@@ -159,20 +213,211 @@
 					<section data-background-color="#EBF5FB"  data-menu-title="Honeyλ Setup">
 						<h2>Setup & Deploy</h2>
 						<small>https://gist.github.com/0x4D31/093653b52f3e9e05e48a61701ca6de99</a></small>
-						<h4><a href="">{Test}</a></h4>
+						<h4><a href="https://zu4tj7nrqc.execute-api.us-east-1.amazonaws.com/dev/25c5feeaf1454ad4b489d3d0e18fec52/index?t=html">{Test}</a></h4>
+						<h4><a href="https://www.mailinator.com/v2/inbox.jsp?zone=public&query=25c5feeaf1454ad4b489d3d0e18fec52.honeylambda">Email alert</a></h4>
+					</section>
+					<section data-background-color="#EBF5FB"  data-menu-title="honeyλ Config">
+						<h2>HoneyLambda Config</h2>
+						<pre><code>
+{
+	"default-http-response": {
+		"content-type": "text/html",
+		"body": "static/poc.html"
+	},
+	"traps": {
+		"/examplec26b4d5e2c1e713/index14": {
+			"t=email": {
+				"note": "tracking pixel in email",
+				"http-response": {
+					"content-type": "image/png",
+					"body": "static/pixel.png"
+				}
+			},
+			"t=doc": {
+				"note": "beacon pixel embedded in doc",
+				"http-response": {
+					"content-type": "image/png",
+					"body": "static/pixel.png"
+				}
+			},
+			"t=html": {
+				"note": "secret link"
+			}
+		}
+	},
+	"alert": {
+		"slack": {
+			"enabled": "false",
+			"webhook-url": ""
+		},
+		"email": {
+			"enabled": "true",
+			"to_email": "example.honeylambda14@mailinator.com",
+			"smtp_server": "smtp.gmail.com",
+			"smtp_port": 465,
+			"smtp_user": "example@gmail.com",
+			"smtp_password": "examplepassword"
+		},
+		"sms": {
+			"enabled": "false",
+			"to_number": "",
+			"from_number": "",
+			"twilio_account_sid": "",
+			"twilio_auth_token": ""
+		}
+	},
+	"threat-intel-lookup": {
+		"enabled": "false",
+		"cymon2-user": "",
+		"cymon2-pass": ""
+	}
+}
+						</code></pre>
 					</section>
 				</section>
-				<section data-background-color="#EAFAF1" data-menu-title="Honeybits I">
-						<h2>Honeybits</h2>
-						<p>TBA</p>
+				<section>
+					<section data-background-color="#EAFAF1" data-menu-title="Honeybits I">
+							<h1>Honeybits</h1>
+					</section>
+					<section>
+						<h4>A simple tool designed to enhance the effectiveness of your traps by spreading breadcrumbs & honeytokens across your production servers and workstations to lure the attacker toward your honeypots</h4>
+						<img src="https://github.com/0x4D31/honeybits/raw/master/docs/honeybits.png" height="400">
+					</section>
+					<section data-background-color="#EAFAF1"  data-menu-title="Honeybits Config">
+						<h2>Honeybits Config</h2>
+						<pre><code>
+path:
+  bashhistory: /home/test/.bash_history
+  awsconf: /home/test/.aws/config
+  awscred: /home/test/.aws/credentials
+  hosts: /etc/hosts
+
+randomline:
+  bashhistory: true
+  confile: false
+
+honeypot: 
+  addr: 192.168.1.66
+
+
+# Fake files
+honeyfile:
+  enabled: true
+  monitor: none # Options: go-audit, auditd, none
+  goaudit-conf: /etc/go-audit.yaml # Only if you use go-audit
+  traps:
+    # Format: - file_path:content_type:template
+    ##  content_type: rdpconn, txtemail, 
+    ##  template: config (read from config file: contentgen.xxx.template), template file path (/tmp/sampletemplate.txt)
+    - /tmp/test.rdp:rdpconn:config
+    - /tmp/email.txt:txtemail:template/txtemail
+
+# Content generator for honeyfiles or file honeybits
+contentgen:
+  rdpconn:
+    user: administrator
+    pass: 12345
+    domain: example.com
+    template: "screen mode id:i:2\ndesktopwidth:i:1024\ndesktopheight:i:768\nuse multimon:i:1\nsession bpp:i:24\nfull address:s:%s\ncompression:i:1\naudiomode:i:2\nusername:s:%s\ndomain:s:%s\nauthentication level:i:0\nclear password:s:%s\ndisable wallpaper:i:0\ndisable full window drag:i:0\ndisable menu anims:i:0\ndisable themes:i:0\nalternate shell:s:\nshell working directory:s:\nauthentication level:i:2\nconnect to console:i:0\ngatewayusagemethod:i:0\ndisable cursor setting:i:0\nallow font smoothing:i:1\nallow desktop composition:i:1\nredirectprinters:i:0\nprompt for credentials on client:i:1\nuse redirection server name:i:0"
+    # server: 192.168.1.66 # Default is 'honeypot addr'
+
+  txtemail:
+    user: dave
+    pass: 12345
+    # template: "From: Adel 0x <adel@example.com>\nSubject: Re: Monitoring system\nDate: March 22, 2017 at 21:59:15 GMT+11\nTo: Dave Cohen <dave.cohen@example.com>\nCc: security <security@example.com>\n\nHi,\n\nAh, sorry I forgot to send you the new address: http://%s\nI also reset your password (user: %s) to the default pass: %s\n\nPlease set the MFA (multi-factor authentication) ASAP.\n\nCheers,\nAdel\n\nOn 22 Mar 2017, at 9:57 pm, Dave Cohen <dave.cohen@example.com> wrote:\n\nHi Adel,\n\nI just wanted to login to the Monitoring system, but I get 404 error. Could you please have a look at it?\n\nThanks\nDave\n\nThe information contained in this email and any attachments is confidential and/or privileged. This email and any attachments are intended to be read only by the person named above. If the reader of this email, and any attachments, is not the intended recipient, you are hereby notified that any review, dissemination or copying of this email and any attachments is prohibited. If you have received this email and any attachments in error, please notify the sender by email or telephone and delete it from your email client."
+    # server: 192.168.1.66 # Default is 'honeypot addr'
+    
+
+honeybits:
+
+  # Fake records in config files
+  awsconf:
+    enabled: false
+    profile: devsecops
+    region: us-east-1
+    accesskeyid: AKIAIOSFODNN7EXAMPLE
+    secretaccesskey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+  hostsconf:
+    enabled: false
+    # ip: 192.168.1.66 # Default is 'honeypot addr'
+    name: mysql-srv
+
+  # Fake records in bash_history
+  ssh:
+    enabled: false
+    # server: 192.168.1.66 # Default is 'honeypot.addr'
+    port: 2222
+    user: root
+    sshpass: false
+    pass: 123456
+
+  wget:
+    enabled: false
+    url: http://192.168.1.66:8080/backup.zip
+
+  ftp:
+    enabled: false
+    # server: 192.168.1.66 # Default is 'honeypot.addr'
+    port: 2121
+    user: backup
+    pass: b123
+
+  rsync:
+    enabled: false
+    # server: 192.168.1.66 # Default is 'honeypot.addr'
+    port: 2222
+    user: root
+    remotepath: /var/db/backup.tar.gz
+    localpath: /tmp/backup.tar.gz
+    sshpass: false
+    pass: 12345
+
+  scp:
+    enabled: false
+    # server: 192.168.1.66 # Default is 'honeypot.addr'
+    port: 2222
+    user: root
+    remotepath: /var/db/backup.tar.gz
+    localpath: /tmp/backup.tar.gz
+
+  mysql:
+    enabled: false
+    # server: 192.168.1.66 # Default is 'honeypot.addr'
+    port: 3306
+    user: dbadmin
+    pass: 12345
+    command: show databases
+    # dbname: clients
+
+  aws:
+    enabled: false
+    profile: devops
+    region: us-east-2
+    command: ec2 describe-instances
+    accesskeyid: AKIAIOSFODNN7EXAMPLE
+    secretaccesskey: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+# custom honeybits in bash_history
+  custom:
+    - telnet 192.168.1.66 25
+    - nano /tmp/backup/credentials.txt
+						</code></pre>
+					</section>
 				</section>
 				<section data-background-color="#FEF9E7" data-menu-title="Canarytokens I">
-						<h2>Canarytokens</h2>
-						<p>TBA</p>
+						<h1>Canarytokens</h1>
 				</section>
-				<section data-menu-title="Decoy Docs">
-						<h2>Decoy Docs</h2>
-						<p>TBA</p>
+				<section>
+					<h2>References</h2>
+					<ul><small>
+						<li>http://blog.thinkst.com/p/canarytokensorg-quick-free-detection.html</li>
+						<li>https://www.topspinsec.com/blog/busting-honeypot-really-way-attackers-detect-deception</li>
+						<li>https://github.com/0x4D31/honeyLambda</li>
+						<li>https://github.com/0x4D31/honeybits</li>
+						<li>https://github.com/0x4D31/honeybits-win</li>
+						<li>https://github.com/thinkst/canarytokens-docker</li>
+					</small></ul>
 				</section>
 				<section>
 					<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
